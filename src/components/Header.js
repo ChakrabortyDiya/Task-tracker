@@ -6,4 +6,8 @@ const Header = (props) => {
   )
 }
 
+Header.defaultProps ={
+    tilte: 'Task Tracker',
+}
+
 export default Header
