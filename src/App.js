@@ -34,6 +34,10 @@ const addTask =async  (task) => {
     },
     body: JSON.stringify(task)
   })
+
+  const data= res.json()
+  
+
   //const id= Math.floor(Math.random() * 10000) + 1
   //const newTask = {id,...task}
   //setTasks([...tasks,newTask])
