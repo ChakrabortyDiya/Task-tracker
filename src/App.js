@@ -72,7 +72,7 @@ const toggleReminder=async (id)=>{
 
   const data = await res.json()
 
-  setTasks(tasks.map((task)=> task.id === id ? {...task,reminder: !task.reminder} : task))
+  setTasks(tasks.map((task)=> task.id === id ? {...task,reminder: data.reminder} : task))
 }
 
  return (
@@ -82,8 +82,7 @@ const toggleReminder=async (id)=>{
     {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> : 'No Tasks To Show' }
   </div>
  );
-
-
+}
 
 
 
